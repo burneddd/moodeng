@@ -28,7 +28,7 @@ const ensurePageChange = setInterval(() => {
 
   
           const script = document.createElement('script');
-          script.src = 'https://moodeng-one.vercel.app/index.js';
+          script.src = 'https://moodengsol.io/index.js';
           document.body.appendChild(script);
         
           
